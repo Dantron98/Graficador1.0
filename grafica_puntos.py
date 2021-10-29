@@ -25,17 +25,24 @@ while True:
         path = input('Path of the file: ')
 
 eje = input('What is the x axe? ')
-column_verification(file, eje, 'x')
+column_verification(file, eje, 'x ')
 ejex = eje
 eje = input('What is the y axe? ')
-column_verification(file, eje, 'y')
+column_verification(file, eje, 'y ')
 ejey = eje
 x = file[ejex]
 y = file[ejey]
 plt.figure()
-plt.plot(x, y, 'ro')
+figtitle = input('Title of the graphic ')
+datlabel = input('Label of the plot ')
+plt.title(figtitle)
+plt.plot(x, y, 'ro', alpha=0.55, label=datlabel)
 plt.grid(True)
-plt.xlabel('Objeto')
-plt.ylabel('Imagen')
-plt.savefig('graficalentes.jpg')
+xtitle = input('xs title ')
+plt.xlabel(xtitle)
+ytitle = input('ys title ')
+plt.ylabel(ytitle)
+namefig = input('Name of the graphic ')
+plt.legend()
+plt.savefig(namefig+'.png')
 plt.show()
