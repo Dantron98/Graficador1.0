@@ -12,5 +12,7 @@ def column_verification(file, eje, hat):
                     answer = input('y/n ')
             if answer == 'y':
                 print(file)
-            eje = input('What is the ' + hat + 'axe? ')
-
+                eje = input('What is the ' + hat + 'axe? ')
+            else:
+                eje = input('What is the ' + hat + 'axe? ')
+    return(eje)

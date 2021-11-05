@@ -4,7 +4,7 @@ def verfy_path(path):
     while True:
         if os.path.isfile(path) == True:
             file = pd.read_csv(path)
-            print('This is the correct file?')
+            print('Is this the correct file?')
             print(file)
             answer = input('y/n ')
             while True:
