@@ -3,6 +3,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from ColumnVerifi_DF import column_verification
 from Titulo import make_title
+
 make_title()
 path = input('Path of the file: ')
 while True:
@@ -32,11 +33,14 @@ column_verification(file, eje, 'y ')
 ejey = eje
 x = file[ejex]
 y = file[ejey]
+
+
+
 plt.figure()
 figtitle = input('Title of the graphic ')
 datlabel = input('Label of the plot ')
 plt.title(figtitle)
-plt.plot(x, y, 'ro', alpha=0.55, label=datlabel)
+plt.plot(x, y, 'ro', alpha=0.55, label=datlabel+r"Ajuste: ${}x + {}$".format(m, b))
 plt.grid(True)
 xtitle = input('xs title ')
 plt.xlabel(xtitle)
